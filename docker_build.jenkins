@@ -37,6 +37,7 @@ pipeline {
                 sh '''
                 docker push andreypichujkov/toolbox:latest
                 '''
+            }
+        }
    } 
 }
-    }
