@@ -25,7 +25,7 @@ pipeline {
         
         stage("create docker image") {
           steps {
-              echo "========== start building image right now=========="
+              echo "========== start building image =========="
               dir ('docker/toollbox') {
                         sh 'docker build -t andreypichujkov/toolbox:latest . '
               }
@@ -33,7 +33,7 @@ pipeline {
       }
         stage("docker push") {
             steps {
-                echo "========== start pushing image step =========="
+                echo "========== start puching image step =========="
                 sh '''
                 docker push andreypichujkov/toolbox:latest
                 '''
